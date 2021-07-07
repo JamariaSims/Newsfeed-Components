@@ -3,6 +3,25 @@
 // You can read about ES6 modules here: https://exploringjs.com/es6/ch_modules.html#sec_basics-of-es6-modules
 const data = [
 	{
+		title: "Jamaria Sims",
+		date: "July 7th, 2021",
+		firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
+        moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
+        watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
+        Hutt calamari darth jabba.Darth dooku amidala organa moff.Boba darth binks solo hutt skywalker dantooine skywalker.Qui - gonn
+        jar twi'lek jinn leia jango skywalker mon.`,
+		secondParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
+        moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
+        watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
+        Hutt calamari darth jabba.Darth dooku amidala organa moff.Boba darth binks solo hutt skywalker dantooine skywalker.Qui - gonn
+        jar twi'lek jinn leia jango skywalker mon.`,
+		thirdParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
+        moff wicket tatooine luke.Solo wampa wampa calrissian yoda moff.Darth grievous darth gonk darth hutt.Darth baba skywalker
+        watto fett jango maul han.Mon ewok sidious sidious lando kenobi grievous gamorrean solo.Yoda wedge utapau darth calamari.
+        Hutt calamari darth jabba.Darth dooku amidala organa moff.Boba darth binks solo hutt skywalker dantooine skywalker.Qui - gonn
+        jar twi'lek jinn leia jango skywalker mon.`,
+	},
+	{
 		title: 'Lambda School Students: "We\'re the best!"',
 		date: "Nov 5th, 2018",
 		firstParagraph: `Lucas ipsum dolor sit amet ben twi'lek padmé darth darth darth moff hutt organa twi'lek. Ben amidala secura skywalker lando
@@ -126,6 +145,7 @@ const articleMaker = (props) => {
 		par2 = document.createElement("p"),
 		par3 = document.createElement("p"),
 		toggleSwitch = document.createElement("span");
+
 	//Assigning Values
 	articleHolder.classList.add("article");
 	articleTitle.innerHTML = title;
@@ -136,15 +156,18 @@ const articleMaker = (props) => {
 	par3.textContent = thirdParagraph;
 	toggleSwitch.classList.add("expandButton");
 	toggleSwitch.textContent = "+";
+
 	//Assigning Event Listeners
 	toggleSwitch.addEventListener("click", (e) => {
 		articleHolder.classList.toggle("article-open");
 	});
+
 	//Assigning Tree
 	const body = [articleTitle, articleDate, par1, par2, par3, toggleSwitch];
 	body.forEach((element) => {
 		articleHolder.appendChild(element);
 	});
+
 	//Returning The Main Div With Childs
 	return articleHolder;
 };

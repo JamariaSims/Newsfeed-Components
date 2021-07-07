@@ -126,7 +126,7 @@ const articleMaker = (props) => {
 		par2 = document.createElement("p"),
 		par3 = document.createElement("p"),
 		toggleSwitch = document.createElement("span");
-
+	//Assigning Values
 	articleHolder.classList.add("article");
 	articleTitle.innerHTML = title;
 	date.innerHTML = date;
